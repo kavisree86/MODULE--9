@@ -5,22 +5,54 @@
 ## Date:
 
 ## Aim:
-
+To implement the right rotation function in a Splay Tree in C++, which rotates a given node to the right to maintain the splay tree properties during insertion, deletion, or splaying.
 
 ## Algorithm:
+STEP 1: Start the program.
 
+STEP 2: Define a node structure with members:
+
+data → value of the node
+
+left → pointer to left child
+
+right → pointer to right child
+
+STEP 3: Pass a node x to the rightRotate function.
+
+STEP 4: Store the left child of x in a temporary pointer y → y = x->left.
+
+STEP 5: Make x->left point to y->right.
+
+STEP 6: Make y->right point to x.
+
+STEP 7: Return y as the new root of the rotated subtree.
+
+STEP 8: End the function.
 
 
 
 
 ## Program:
+```
+node *rightRotate(struct node *x)
+{
+    node *y = x->left;
+    x->left = y->right;
+    y->right = x;
+    return y;
+}
+```
 
 
 
 ## Output:
+<img width="1173" height="635" alt="567418580-83d85977-dc86-4780-8d5c-4090a7ee0b80" src="https://github.com/user-attachments/assets/90219ce5-ac8a-4fa8-9a32-81d29ff2db55" />
 
 
 
  ## Result:
+The rightRotate function rotates a subtree rooted at node x to the right.
+
 
 
